@@ -1,2 +1,4 @@
-# blackjack-game-js
-Game Blackjack - JS Level 1
+# Game Blackjack - JS Level 1
+
+Spanish Version Documentation
+Documentación en Español
