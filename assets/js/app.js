@@ -86,8 +86,17 @@ btnPedir.addEventListener('click', () => {
   if (puntosJugador > 21) {
     console.warn('Lo siento mucho, perdite');
     btnPedir.disabled = true;
+    btnDetener.disabled = true;
     turnoComputadora(puntosJugador);
   } else if (puntosJugador === 21) {
+    btnPedir.disabled = true;
+    btnDetener.disabled = true;
     console.warn('21, genial!');
   }
+});
+
+btnDetener.addEventListener('click', () => {
+  btnPedir.disabled = true;
+  btnDetener.disabled = true;
+  turnoComputadora(puntosJugador);
 });
