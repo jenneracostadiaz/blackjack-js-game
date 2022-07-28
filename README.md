@@ -9,4 +9,4 @@ Documentación en Español
 
 ### En Producción
 
-<a target="_blank" href="https://blackjackjsgame.github.com/">JS BlackJack Game</a>
+<a target="_blank" href="https://jenneracostadiaz.github.io/blackjack-js-game/">JS BlackJack Game</a>
