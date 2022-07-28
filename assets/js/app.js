@@ -71,6 +71,18 @@ const turnoComputadora = (puntosMinimos) => {
       break;
     }
   } while (puntosComputadora < puntosMinimos && puntosMinimos <= 21);
+
+  setTimeout(() => {
+    if (puntosComputadora == puntosMinimos) {
+      alert('Empate!');
+    } else if (puntosMinimos > 21) {
+      alert('Computadora Gana');
+    } else if (puntosComputadora > 21) {
+      alert('Jugador Gana');
+    } else {
+      alert('Computadora Gana');
+    }
+  }, 50);
 };
 
 //Eventos
