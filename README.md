@@ -3,33 +3,10 @@
 Spanish Version Documentation \
 Documentación en Español
 
-## Creamos la siguiente estructura de código:
+### Documentación
 
-<pre><code>
-/assets
-	/js/app.js
-	/css/syle.css
-	/cartas/todaslasimagenesdecartas
-index.html
-</code></pre>
+<a href="https://power-almandine-3c4.notion.site/Lab-1-Blackjack-20528a5006e24c089f75f099669fed52">Ver Documentación y Referencias</a>
 
-En el index.html
+### En Producción
 
-<pre><code>
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <title>Blackjack</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
-  </head>
-  <body>
-    <script src="./assets/js/app.js"></script>
-  </body>
-</html>
-</code></pre>
+<a href="https://blackjackjsgame.github.com/">JS BlackJack Game</a>
