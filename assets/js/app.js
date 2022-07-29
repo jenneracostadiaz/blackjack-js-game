@@ -1,11 +1,10 @@
 const miModulo = (() => {
   'use strict';
+
   let deck = [];
   const tipos = ['C', 'D', 'H', 'S'],
-    especiales = ['A', 'J', 'Q', 'K'];
+  especiales  = ['A', 'J', 'Q', 'K'];
 
-  // let puntosJugador = 0,
-  //   puntosComputadora = 0;
   let puntosJugadores = [];
 
   //Referencias HTML
@@ -14,7 +13,7 @@ const miModulo = (() => {
     btnNuevo = document.querySelector('#btnNuevo');
 
   const divCartasJugadores = document.querySelectorAll('.divCartas'),
-    puntosHTML = document.querySelectorAll('small');
+        puntosHTML = document.querySelectorAll('small');
 
   //Esta función inicializa el jeugo
   const inicializarJuego = ( numJugadores = 2 ) => {
@@ -54,13 +53,14 @@ const miModulo = (() => {
     if (deck.length === 0) {
       throw 'No hay cartas en el deck';
     }
-
     return deck.pop();
   };
 
   const valorCarta = (carta) => {
     const valor = carta.substring(0, carta.length - 1);
-    return isNaN(valor) ? (valor === 'A' ? 11 : 10) : valor * 1;
+    return ( isNaN( valor ) ) ? 
+            ( valor === 'A' ) ? 11 : 10
+            : valor * 1;
   };
 
   //Turno: 0 = primer jugador y el último es la computadora
@@ -97,7 +97,7 @@ const miModulo = (() => {
     let puntosComputadora = 0;
     do {
       const carta = pedirCarta();
-      acumularPuntos(carta, puntosJugadores.length - 1);
+      puntosComputadora = acumularPuntos(carta, puntosJugadores.length - 1);
       crearCarta(carta, puntosJugadores.length - 1);
       
     } while (puntosComputadora < puntosMinimos && puntosMinimos <= 21);
@@ -118,9 +118,10 @@ const miModulo = (() => {
       btnDetener.disabled = true;
       turnoComputadora(puntosJugador);
     } else if (puntosJugador === 21) {
+      console.warn('21, genial!');
       btnPedir.disabled = true;
       btnDetener.disabled = true;
-      console.warn('21, genial!');
+      turnoComputadora(puntosJugador);
     }
   });
 
@@ -130,14 +131,14 @@ const miModulo = (() => {
     turnoComputadora(puntosJugadores[0]);
   });
 
-  btnNuevo.addEventListener('click', () => {
+  // btnNuevo.addEventListener('click', () => {
     
-    inicializarJuego();
+  //   inicializarJuego();
     
-  });
+  // });
 
   return {
     nuevoJuego: inicializarJuego
-  }
+  };
 })()
 
